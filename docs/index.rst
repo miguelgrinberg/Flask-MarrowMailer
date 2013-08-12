@@ -84,36 +84,6 @@ Consult the `marrow.mailer documentation <https://github.com/marrow/marrow.maile
 API
 ---
 
-.. module:: flask_marrowmailer
-
-.. class:: Mailer
-
-  This class encapsulates the mailer functionality.
-  
-  .. method:: __init__(app)
-  
-    Initialize the extension. Similar to ``init_app(app)``.
-  
-  .. method:: init_app(app)
-  
-    Initialize the extension. Configuration will be obtained from ``app.config['MARROWMAILER_CONFIG']``. If no configuration is found the mailer will be configured to send emails asynchrously via SMTP on ``localhost`` without authentication.
-  
-  .. method:: new(**kwargs)
-  
-    Return a new ``Message`` instance. The arguments are passed to the constructor.
-    
-  .. method:: send(message)
-  
-    Send the message. If ``message`` is an iterable, then send all the messages.
-    
-.. class:: Message
-
-  This class encapsulates an email message. It inherits from ``marrow.mailer.Message``, so all the attributes and methods described in the base class `documentation <https://github.com/marrow/marrow.mailer#4-the-message-class>`_ are also available.
-  
-  .. method:: render_template(plain, rich = None, **context)
-  
-    Render the body of the message from a template. The 'plain' body will be rendered from a template named ``plain`` or ``plain + '.txt'`` (in that order of preference). The 'rich' body will be rendered from ``rich`` if given, or else from ``plain + '.html'``.
-    
-  .. method:: render_template_string(plain, rich = None, **context)
-
-    Render the body of the message from a string. If ``rich`` isn't provided then the message will only have the 'plain' body.
+.. automodule:: flask_marrowmailer
+   :members:
+   
