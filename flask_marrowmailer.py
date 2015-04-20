@@ -17,7 +17,7 @@ class Message(BaseMessage):
         have no rich body.'''
         self.plain = render_template([plain, plain + '.txt'], **context)
         if rich is not None:
-            self.rich = render_tempalte(rich, **context)
+            self.rich = render_template(rich, **context)
         else:
             try:
                 self.rich = render_template(plain + '.html', **context)
