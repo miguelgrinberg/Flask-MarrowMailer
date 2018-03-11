@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='Flask-MarrowMailer',
-    version='0.2.0',
+    version='0.3.0',
     url='http://github.com/miguelgrinberg/Flask-MarrowMailer/',
     license='MIT',
     author='Miguel Grinberg',
@@ -23,7 +23,6 @@ setup(
     install_requires=[
         'Flask',
         'marrow.mailer',
-        'futures'
     ],
     test_suite = "test_marrowmailer",
     classifiers=[
